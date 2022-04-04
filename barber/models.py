@@ -1,10 +1,47 @@
-from distutils.text_file import TextFile
-from mimetypes import init
 from django.db import models
-from django.forms import CharField, Textarea
 
 # Create your models here.
 class FAQ(models.Model):
-    question = CharField(max_length=100)
-    answer = CharField()
+    question = models.CharField('Question', max_length=100, default='Question: ')
+    answer = models.TextField('Answer', default='Manager will give the answer...')
     
+    def __str__(self):
+        return self.question
+    
+    class Meta:
+        verbose_name_plural = 'FAQ'
+    
+class Comments(models.Model):
+    client_name = models.CharField('Name', max_length=50)
+    comment = models.TextField('Comment')
+    
+    def __str__(self):
+        return self.client_name
+    
+    class Meta:
+        verbose_name_plural = 'Comments'
+    
+class Services(models.Model):
+    service_name = models.CharField('Service name', max_length=50)
+    service_cost = models.CharField('Service cost', max_length=20)
+    about = models.TextField('About service')
+
+    
+    def __str__(self):
+        return self.service_name
+    
+    class Meta:
+        verbose_name_plural = 'Services'
+    
+    
+class Barbers(models.Model):
+    barber_name = models.CharField('Name', max_length=50)
+    work_name = models.CharField('Work name', max_length=30)
+    about_barber = models.TextField('About barber')
+    barber_photo = models.ImageField('Photo')
+    
+    def __str__(self):
+        return self.barber_name
+    
+    class Meta:
+        verbose_name_plural = 'Barbers'
