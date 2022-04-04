@@ -1,0 +1,275 @@
+/* Layout */
+    .wcsl-map {
+        height: 500px;
+        width: 400px;
+    }
+    /* End Layout */
+    /* Typography */
+    @font-face {
+      font-family: 'fcicomoon';
+      src:  url('../fonts/icomoon.eot?vfxpw0');
+      src:  url('../fonts/icomoon.eot?vfxpw0#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?vfxpw0') format('truetype'),
+        url('../fonts/icomoon.woff?vfxpw0') format('woff'),
+        url('../fonts/icomoon.svg?vfxpw0#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .wcsl-store-locator {
+        font-size: 12px;
+    }
+    
+    .fc-form-group label {
+        font-size: 1em;
+    }
+    
+    .fc-form-group select.form-control,
+    .fc-form-group input.form-control {
+        font-size: .8em;
+    }
+
+    .wcsl-store-locator .wcsl-map-container {
+        width: 69%;
+        float: left;
+    }
+    
+    .wcsl-store-locator .wcsl-listing {
+        width: 30%;
+        height: 490px;
+        float: right;
+        overflow: auto;
+    }
+
+    /* End */
+    /* Filters */
+    
+    .wcsl-filter-form {
+        margin-bottom: 10px;
+    background: #f4d03f;
+    padding: 10px;
+    }
+    
+    .fc-form-group  input.fc-btn-submit {
+        padding: 8px 13px;
+    border: none;
+    font-size: .8em;
+    text-transform: uppercase;
+    border-radius: 0px;
+    }
+    
+    .wcsl-loc-input input.wpgmp_auto_suggest,select.form-control,
+    input.form-control, div.wsl-directions input[name="wsl-start"] {
+        border-radius: 0px;
+        border: none;
+        padding: 5px 10px;
+    }
+    
+    .fc-form-group input.btn.btn-primary {
+        cursor: pointer;
+    }
+
+    .fc-form-group {
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    /* Listing */
+    
+    .wcsl-results {
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+        font-size: .8em;
+        font-style: italic;
+    }
+    
+    .wcsl-items {
+        margin: 0;
+        padding: 0;
+          list-style: none;
+    }
+
+    .wcsl-listing ul.wcsl-items li.wcsl-item {
+        list-style: outside none none;
+        opacity: 1;
+        border-bottom: 1px solid #f9f9f9;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .wcsl-listing ul.wcsl-items li.wcsl-item .place_title {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .wcsl-item .wsl-driving-directions a.wsl-driving-link {
+       display: inline-block;
+       color: #000;
+       font-size: .9em;
+       padding: 5px; 
+       background: #fff;
+    }
+    
+    
+
+    .wcsl-item a.place_title, .wcsl-item a.wcsl_get_distance, .wcsl-item .wsl-driving-directions a.wsl-driving-link {
+        text-decoration: none;
+        box-shadow: none;
+    }
+
+    .wcsl-item .wsl-driving-directions {
+        margin-bottom: 20px;
+    }
+    
+   .place_title:before {
+    content: "\e900";
+    font: normal normal normal 14px/1 fcicomoon;
+    font-size: 1em;
+    margin-right: 5px;
+    }
+   
+    .wsl_actions {
+        float: right;
+        margin-right: 5px;
+    }
+
+    .wsl_print:before {
+        content: "\e905";
+        font: normal normal normal 14px/1 fcicomoon;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+   
+     .wcsl_distance_details {
+        padding: 5px 10px;
+        font-size: .8em;
+        display: inline-block;
+        margin: 10px 0px;
+     }   
+     .wcsl_get_distance:after {
+        content: "\e902";
+        font: normal normal normal 14px/1 fcicomoon;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    .wcsl-loc-input{
+        position: relative;
+    }
+    
+    input.wpgmp_auto_suggest {
+      
+        width: 100%;
+        font-size: 1em;
+        display: inline !important;
+    }
+
+    .wcsl-item input.wpgmp_auto_suggest {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .wcsl-current-location {
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 7px;
+        cursor: pointer;
+    }
+
+      .wcsl-current-location:before {
+        content: "\e901";
+        font: normal normal normal 14px/1 fcicomoon;
+        font-size: 1.2em;
+    }
+
+    .wsl-directions .wcsl-current-location {
+        margin-left: -25px;
+        margin-top: 14px;
+    }
+
+     .wsl-directions input[type="text"] {
+        width: 85% !important;
+    }
+
+     div.wsl-directions {
+        margin-bottom: 10px;
+        position: relative;
+        display: none;
+    }
+    
+    div.wsl-directions input[name="wsl-go"] {
+    padding: 6px 10px;
+    border: none;
+    font-size: 1em;
+    border-radius: 0px;
+    }
+    
+    .wcsl-item-pcab {
+        background-image: url('../images/star.png');
+        background-repeat: no-repeat;
+    }
+
+
+
+    /* End */
+    
+    .wc_load_more {
+        width: 32px;
+        height: 32px;
+        background: url(../images/loader.gif) repeat;
+        display: inline-block;
+        vertical-align: middle;
+        float: none !important;
+    }
+
+    /* Colors */
+
+    .wcsl-filter-form, .wcsl-store-locator .wcsl-listing {
+        background: #F4D03F;
+    }
+    
+    .fc-btn-submit,.wcsl-results,.wcsl_distance_details, div.wsl-directions input[name="wsl-go"] {
+        background: #212f3d;
+    }
+    
+    select.form-control,
+    input.form-control, div.wsl-directions input[name="wsl-start"] {
+        background: #fff;
+    }
+    
+    .wcsl-listing ul.wcsl-items li.wcsl-item .place_title, p.wsl_content {
+        color: #212f3d;
+    }
+    
+    div.wsl-directions input[name="wsl-go"], .place_title:before,.wcsl_get_distance:after, .fc-btn-submit,.wcsl-results,.wcsl_distance {
+        color: #fff;
+    }
+           
+    .wcsl-current-location:before {
+        color: #F4D03F;
+    }
+
+    .wsl-dir-panel {
+    display: block;
+    direction: ltr;
+    background: #fff;
+    margin: 20px 0px;
+    }
+
+    .wsl-dir-panel .adp-placemark, .wsl-dir-panel .adp-summary, .wsl-dir-panel .adp-directions, .wsl-dir-panel .adp-legal {
+        padding: 10px;
+    }
+
+    .wsl-dir-panel .adp-text {
+        border: none;
+    }
+    
+	
+	@media(max-width:900px){
+		.wcsl-store-locator .wcsl-listing {
+			width: 100% !important;
+			height: initial !important;
+		}
+		.wcsl-store-locator .wcsl-map-container {
+			width: 100% !important; 
+ 			margin-bottom: 10px;
+		}
+	}

@@ -1,0 +1,12 @@
+.sc_table table {
+	width: 100%;
+}
+.sc_table table th,
+.sc_table table td {
+	padding: 1em;
+}
+
+.sc_table table td{
+	border-left-width: 0;
+	border-right-width: 0;
+}
