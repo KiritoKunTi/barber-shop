@@ -1,8 +1,10 @@
 .header {
     width: 100%;
-    background-color: #42403f;
+    /* background-color: #42403f; */
     position: fixed;
     z-index: 10;
+
+    overflow-x: hidden;  
 }
 .header__block {
     display: flex;

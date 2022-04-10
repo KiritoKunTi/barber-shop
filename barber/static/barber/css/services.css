@@ -1,0 +1,96 @@
+body {
+    background-color: #ccc;  
+}
+
+
+.services__intro {
+    text-align: center;
+
+    margin: 120px 0 60px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.services__intro span {
+    font-size: 1.6428em;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3343em;
+    margin-top: 2em;
+    margin-bottom: 1.06em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    font-family: poppins, san-serif;
+}
+
+.services__wrapper {
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+
+}
+.services__container {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+
+    justify-content: center;
+    overflow: hidden;
+
+    width: 100%;
+}
+.service__wrap {
+    text-align: center;
+
+    background-color: white;
+}
+.service__column {
+
+}
+.service_name {
+    font-weight: 600;
+    font-size: 23px;
+
+    display: block;
+    padding: 20px 10px;
+}
+.service_cost {
+    font-family: merriwheather, serif;
+    font-size: 18px;
+    color: #40507f;
+
+    display: block;
+
+    padding-bottom: 12px;
+}
+.about_service {
+    font-family: merriwheather, serif;
+    font-size: 0.857em;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    display: block;
+    padding: 15px 25px;
+}
+
+.services_theend {
+    text-align: center;
+
+    margin: 120px 0 60px 0;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.services_theend span {
+    font-weight: 300;
+    font-family: poppins, san-serif;
+    font-size: 14px;
+}

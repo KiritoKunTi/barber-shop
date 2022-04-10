@@ -1,5 +1,10 @@
 {% extends 'barber/layout.html' %}
 
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/services.css">
+{% endblock %}
+
+
 {% block title %}Services{% endblock %}
 
 {% block content %}
@@ -11,4 +16,29 @@
             <span class="title">Our services</span>
         </div>
     </div>
+
+    <section class="services__wrapper">
+        <div class="services__intro">
+            <span>PRICES MAY VARY DEPENDING ON LOCATION.</span> 
+        </div>
+        <div class="services__container">
+            {% for service in services %}
+                <div class="service__wrap">
+                    <div class="service__column">
+                        <span class="service_name">{{  service.service_name  }}</span>
+                        <span class="service_cost">{{ service.service_cost }}
+                        </span>
+                        <span class="about_service">{{ service.about }}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="services_theend">
+            <span>
+                Please note that our prices at our NW 23rd location may vary from other locations.
+            </span>
+            
+        </div>
+    </section>
 {% endblock %}

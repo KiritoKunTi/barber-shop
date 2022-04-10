@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class FAQ(models.Model):
@@ -10,6 +11,8 @@ class FAQ(models.Model):
     
     class Meta:
         verbose_name_plural = 'FAQ'
+        
+    
     
 class Comments(models.Model):
     client_name = models.CharField('Name', max_length=50)
@@ -21,18 +24,19 @@ class Comments(models.Model):
     class Meta:
         verbose_name_plural = 'Comments'
     
+    
+    
 class Services(models.Model):
     service_name = models.CharField('Service name', max_length=50)
     service_cost = models.CharField('Service cost', max_length=20)
-    about = models.TextField('About service')
-
+    about = models.TextField('About service')    
     
     def __str__(self):
         return self.service_name
     
     class Meta:
         verbose_name_plural = 'Services'
-    
+
     
 class Barbers(models.Model):
     barber_name = models.CharField('Name', max_length=50)
