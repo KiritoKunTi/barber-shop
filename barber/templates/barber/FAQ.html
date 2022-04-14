@@ -1,0 +1,28 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/FAQ.css">
+{% endblock %}
+
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="wrap">
+            <div class="main_title">We are open!</div>
+            <div class="title">Here are some FAQs to help you understand our new normal</div>
+
+            {% for faq in faqs %}
+                <div class="column_container">  
+                    <div class="question"><p class="question_id">{{ faq.id }}.</p>{{ faq.question }}</div>
+                    <div class="answer">Answer: {{ faq.answer }}</div>
+                </div>
+            {% endfor %}           
+            <div class="faq_end">
+                We are so thankful for your continued support through all of this. Please know we are doing everything in our power to make our barbershops comfortable and safe for you all. From our entire family at The Barbers, thank you for supporting local.
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="static/barber/css/null.css">
     <link rel="stylesheet" href="static/barber/css/header.css">
     <link rel="stylesheet" href="static/barber/css/header_img.css">
-    <link rel="stylesheet" href="static/barber/css/services.css">
 
     {% block css %}{% endblock %}
     
@@ -22,21 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="width: 100vw; max-width: 100%; overflow-x: hidden; padding: 0; margin: 0;">
     {% include 'barber/header.html' %}
-
-
-    <!-- <div class="header_img__block">
-        <div class="img__block">
-            <img src="static/barber/media/source/barber_head_img.jpg" alt="header_img" class="image_head"></div>
-            <div class="img_opacity"></div>
-        <div class="head_title">
-            <span class="title">{% block head_title %}{% endblock %}</span>
-        </div>
-    </div> -->
-
     {% block content %}{% endblock %}
-    
-
-</body>
+    </body>
 </html>

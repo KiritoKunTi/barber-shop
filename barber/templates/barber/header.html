@@ -2,7 +2,7 @@
 <header class="header">
     <div class="header__block">
         <div class="logo__block">
-            <a href="">
+            <a href="{% url 'main' %}">
                 <img src="static/barber/media/source/barbers-logo-2-185.png" alt="barbers" class="logo">
             </a>
         </div>
@@ -11,7 +11,7 @@
                 <li class="menu__item"><a class="item__link" href="">Booking</a></li>
                 <li class="menu__item"><a class="item__link" href="">Our team</a></li>
                 <li class="menu__item"><a class="item__link" href="{% url 'services' %}">Services</a></li>
-                <li class="menu__item"><a class="item__link" href="">FAQ</a></li>
+                <li class="menu__item"><a class="item__link" href="{% url 'faq' %}">FAQ</a></li>
                 <li class="menu__item"><a class="item__link" href="">Join to us</a></li>
                 <li class="menu__item"><a class="item__link" href="">About us</a></li>
             </ul>
