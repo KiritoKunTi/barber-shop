@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "barber/static",
 ]
 
 
@@ -131,3 +131,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'barber/static/barber/media')
 MEDIA_URL = '/media/'
+
+
+DEFAULT_FROM_EMAIL = '200103323@stu.sdu.edu.kz'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '200103323@stu.sdu.edu.kz'
+EMAIL_HOST_PASSWORD = 'SDUMYLOVE'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

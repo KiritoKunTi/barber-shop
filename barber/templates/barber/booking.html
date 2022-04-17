@@ -1,0 +1,63 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/booking.css">
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper-booking">
+        <div class="wrap-booking__text">
+            <div class="block-booking__text">
+                <img src="static/barber/media/source/barbers-sripes-left.png" alt="">
+                <span class="quick-booking__text">Quick booking</span>
+                <img src="static/barber/media/source/barbers-sripes-right.png" alt="">
+
+            </div>
+        </div>
+
+        <div class="wrap-booking__form">
+            
+            <div class="block-booking__form">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="booking-form__grid">
+                            {{ form.first_name }}
+                            {{ form.last_name }}
+                            {{ form.recipient }}
+                            {{ form.phone }}
+                            <select name="services" id="" class="booking-form__item">
+                                <option value="highlights">Highlights</option>
+                                <option value="Grey blending">Grey blending</option>
+                                <option value="Beard trim">Beard trim</option>
+                                <option value="Kid's cut">Kid's cut</option>
+                                <option value="Senior citizens cut">Senior citizens cut</option>
+                                <option value="Hot lather neck shave<">Hot lather neck shave</option>
+                                <option value="Men's cut">Men's cut</option>
+                                <option value="The works">The works</option>
+                            </select>
+                            <select name="barbers" id="" class="booking-form__item">
+                                <option value="kathy">Kathy</option>
+                                <option value="roe">Roe</option>
+                                <option value="luis">Luis</option>
+                                <option value="javier">Javier</option>
+                                <option value="erika valentin">Erika Valentin</option>
+                                <option value="john valentin">John Valentin</option>
+                            </select>
+                    </div>
+
+                        <textarea class="booking-form__message" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <input type="submit" value="SUBMIT" class="booking-submit__btn">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="message">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}                            
+                        {% endif %}
+                        
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

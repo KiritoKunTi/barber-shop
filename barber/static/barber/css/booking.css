@@ -1,0 +1,122 @@
+body {
+    color: white;
+    background-color: white;
+}
+
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+}
+
+.text {
+    font-size: 100px;
+}
+
+.booking-form__item {
+    height: 43px;
+    width: 349px;
+
+    background-color: #f4f1f1;
+    border: 0;
+    outline: none;
+    line-height: 100px;
+}
+.booking-form__item:hover {
+    border: 0;
+    background-color: hsl(0, 4%, 90%);
+}
+.booking-form__item:active {
+    border: 0;
+}
+
+.booking-form__item::placeholder {
+    padding-left: 10px;
+    margin: 10;
+}
+
+.wrapper-booking {
+    margin-top: 85px;
+}
+.wrap-booking__text {
+    width: 1200px;
+    margin: 160px auto 60px;
+
+    text-align: center;
+
+
+}
+.block-booking__text {
+}
+.quick-booking__text {
+    font-family: 'Oswald', sans-serif;
+    color: #273252;
+    font-size: 40px;
+
+    text-transform: uppercase;
+
+    margin: 0 50px;
+}
+.wrap-booking__form {
+    width: 1200px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.block-booking__form {
+    
+}
+.booking-form__message {
+    margin-top: 22px;
+    width: 720px;
+    height: 110px;
+
+    position: relative;
+    background-color: #f4f1f1;
+}
+.booking-form__message::placeholder {  
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    top: 12px;
+    font-family: Arial;
+}
+.booking-form__message:hover {
+    background-color: hsl(0, 4%, 90%);
+}
+
+.booking-form__grid {
+    display: grid;
+    grid-template-columns: 349px 349px;
+    grid-template-rows: 43px 43px;
+    grid-gap: 22px;
+    place-content: center;
+}
+
+.booking-submit__btn {
+    margin-top: 22px;
+
+    width: 720px;
+    height: 43px;
+
+    font-family: Poppins;
+    background-color: #e2001a;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    border: 0;
+    outline: 0;
+
+    transition: all linear .15s;
+}
+
+.booking-submit__btn:hover {
+    background-color: #273252;
+}
