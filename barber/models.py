@@ -49,3 +49,27 @@ class Barbers(models.Model):
     
     class Meta:
         verbose_name_plural = 'Barbers'
+        
+        
+class Resumes(models.Model):
+    first_name = models.CharField('First Name', max_length=20)
+    last_name = models.CharField('Last Name', max_length=20)
+    email = models.EmailField('Email')
+    phone = models.CharField('Phone', max_length=16)
+    summary = models.TextField('Message')
+    picture = models.ImageField('Upload Files')
+    
+    def __str__(self):
+        return self.last_name
+    
+    class Meta:
+        verbose_name_plural = 'Resumes'
+    
+    
+    
+    
+    
+    
+    
+    
+    
