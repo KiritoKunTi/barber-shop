@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.urls import reverse
 
@@ -57,7 +58,7 @@ class Resumes(models.Model):
     email = models.EmailField('Email')
     phone = models.CharField('Phone', max_length=16)
     summary = models.TextField('Message')
-    picture = models.ImageField('Upload Files')
+    picture = models.ImageField('Upload Files', blank=True, null=True)
     
     def __str__(self):
         return self.last_name

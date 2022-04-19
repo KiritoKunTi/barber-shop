@@ -1,6 +1,7 @@
+from multiprocessing import context
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import BookingForm
+from .forms import BookingForm, ResumeForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -55,3 +56,15 @@ def faq(request):
     faqs = FAQ.objects.all()
     context = {'faqs': faqs}
     return render(request, 'barber/faq.html', context)
+
+
+def join(request):
+    if request.method == 'POST':
+        form = ResumeForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('main')
+    else:
+        form = ResumeForm()
+    
+    return render(request, 'barber/join_our_team.html', {'form': form})

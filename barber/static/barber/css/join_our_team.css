@@ -1,0 +1,156 @@
+body {
+    background-color: white;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    resize: none;
+}
+
+.wrapper-join {
+    margin-bottom: 120px;
+}
+.wrap-join__text {
+    width: 1200px;
+    margin: 100px auto 90px;
+}
+.block-join__text {
+    text-align: center;
+}
+.join-head__text {
+    font-family: Oswald;
+    font-weight: 500;
+    font-size: 40px;
+    color: #273252;
+    
+    margin: 0 50px;
+    text-transform: uppercase;
+}
+.wrap-join__content {
+    width: 1200px;
+    margin: 0 auto;
+}
+.block-join__content {
+    
+}
+.join-outer-grid {
+    display: grid;
+    grid-template-columns: 585px 585px;
+
+    grid-column-gap: 50px;
+}
+.join-grid-left {
+}
+.join-grid-right {
+}
+.right-grid {
+    display: grid;
+    grid-template-columns: 251px 251px;
+    grid-template-rows: 42px 42px;
+    grid-column-gap: 16px;
+    grid-row-gap: 40px;
+}
+
+.join-submit-btn {
+    width: 519px;
+    height: 50px;
+
+    margin-top: 15px;
+    background-color: #e2001a;
+    border: 0;
+
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    transition: background-color linear .2s;
+}
+
+.join-submit-btn:hover {
+    background-color: #191514;
+}
+
+.join-grid__item {
+    width: 251px;
+    height: 42px;
+
+    background-color: #eae3e380;   
+    border: 0; 
+}
+.join-grid__item:active {
+    outline: none;
+}
+
+.join-message {
+    width: 519px;
+    height: 160px;
+
+    background-color: #eae3e380;    
+
+}
+
+.join-picture {
+
+}
+
+.grid__item label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.first {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 16px;
+    color: #42403f;
+    
+}
+.second {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    font-family: Merriweather;
+    font-weight: 300;
+    font-size: 14px;
+    color: #42403f;
+    line-height: 26px;
+    
+}
+.third {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    font-family: Merriweather;
+    font-weight: 700;
+    font-size: 14px;
+    color: #191514;
+    line-height: 26px;
+}
+.fourth {
+    font-family: Merriweather;
+    font-weight: 300;
+    font-size: 14px;
+    color: #42403f;
+    line-height: 26px;
+}
+
+label {
+    font-family: Merriweather;
+    font-weight: 600;
+    font-size: 14px;
+    color: #42403f;
+    
+}

@@ -1,0 +1,89 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/join_our_team.css">
+{% endblock %}
+
+{% block content %}
+    <div class="header_img__block">
+        <div class="img__block">
+            <img src="static/barber/media/source/barber_head_img.jpg" alt="header_img" class="image_head"></div>
+            <div class="img_opacity"></div>
+        <div class="head_title">
+            <span class="title">Join our team</span>
+        </div>
+    </div>
+
+    
+    <section class="wrapper-join">
+
+        <div class="wrap-join__text">
+            <div class="block-join__text">
+                <img src="static/barber/media/source/barbers-sripes-left.png" alt="">
+                <span class="join-head__text">Apply with us</span>
+                <img src="static/barber/media/source/barbers-sripes-right.png" alt="">
+            </div>
+        </div>
+
+        <div class="wrap-join__content">
+            <div class="block-join__content">
+                <div class="join-outer-grid">
+                    <div class="join-grid-left">
+                        <span class="first">Thank you for your interest in The Barbers!</span>
+                        <p class="second">
+                            Established in 1999, The Barbers continues to lead the way in providing the absolute best barber shop experience in all of Portland and Clark County. By focusing solely on the grooming needs of men, The Barbers name has become synonymous with great men’s haircuts and services. <br> <br>
+
+                            Join our team of master barbers, the best paid hair cutters in the industry! Great opportunities await. Just e mail us in the form to the right to set up an interview. <br> <br>
+
+                            As we continue to open new locations and stay focused on the growth of our current stores, stylist and management positions become available. Email now to find out more about our total compensation package.
+                        </p>
+                        <strong class="third">Check out our hiring brochure here!</strong>
+                        <p class="fourth">
+                            Good Luck,<br>
+                            Don and Alison Lovell <br>
+                            The Barbers LLC
+                        </p>
+                    </div>
+                    <div class="join-grid-right">
+                        <form method="post" enctype=multipart/form-data>
+                            {% csrf_token %}
+                            <div class="right-grid">
+                                <p class="grid__item">
+                                    <label for="">First Name</label>
+                                    {{ form.first_name }}
+                                </p>
+                                <p class="grid__item">
+                                    <label for="">Last Name</label>
+                                    {{ form.last_name }}
+                                </p>
+                                <p class="grid__item">
+                                    <label for="">Email</label>
+                                    {{ form.email }}
+                                </p>
+                                <p class="grid__item">
+                                    <label for="">Phone</label>
+                                    {{ form.phone }}
+                                </p>
+                            </div>
+                            <p class="grid__item">
+                                <div style="margin-top: 45px; margin-bottom: 10px;">
+                                   <label>Message</label> 
+                                </div>
+                                {{ form.summary }}
+                            </p>
+                            <p style="margin-top: 15px;">
+                                <label style="margin-right: 10px;">Uplade Files</label>
+                                {{ form.picture }}
+                            </p>                       
+
+                            <input type="submit" value="Submit" class="join-submit-btn">
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
+

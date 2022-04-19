@@ -129,8 +129,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'barber/static/barber/media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'barber/media/images')
+MEDIA_URL = '/images/'
 
 
 DEFAULT_FROM_EMAIL = '200103323@stu.sdu.edu.kz'
