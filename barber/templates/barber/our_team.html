@@ -1,0 +1,47 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/our_team.css">
+{% endblock %}
+
+{% block content %}
+    <div class="header_img__block">
+        <div class="img__block">
+            <img src="static/barber/media/source/barber_head_img.jpg" alt="header_img" class="image_head"></div>
+            <div class="img_opacity"></div>
+        <div class="head_title">
+            <span class="title">Our team</span>
+        </div>
+    </div>
+
+    <div class="wrapper-team">
+        <div class="block-team">
+            <div class="wrap-team-text">
+                <img src="static/barber/media/source/barbers-sripes-left.png" alt="">
+                <div class="block-team-text"><span>Big Family</span></div>
+                <img src="static/barber/media/source/barbers-sripes-right.png" alt="">
+
+            </div>
+            <div class="wrap-team-barbers">
+                <div class="block-team-barbers">
+                    <div class="body-barber">
+                        {% for barber in barbers %}
+                        <div class="box-barber">
+                            <div class="barber-picture">
+                                <img src="{{ barber.barber_photo.url }}" width="269px" height="240px" alt="">
+                            </div>
+                            <div class="wrap-barber-info">
+                                <div class="barber-name">{{ barber.barber_name }}</div>
+                                <div class="barber-pro">{{ barber.work_name }}</div>
+                                <div class="barber-about">{{ barber.about_barber }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

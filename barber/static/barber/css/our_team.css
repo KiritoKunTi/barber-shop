@@ -1,0 +1,74 @@
+body {
+    background-color: white;
+    font-family: poppins;
+}
+
+.wrapper-team {
+    width: 1080px;
+    margin: 90px auto;
+
+}
+.block-team {
+}
+.wrap-team-text {
+    margin-bottom: 100px;
+    text-align: center;
+}
+.block-team-text {
+    display: inline-block;
+    
+}
+.block-team-text span{
+    font-family: Oswald;
+    font-weight: 500;
+    font-size: 40px;
+    color: #273252;
+    
+    margin: 0 50px;
+    text-transform: uppercase;
+}
+
+.wrap-team-barbers {
+}
+.block-team-barbers {
+}
+.body-barber {
+}
+.box-barber {
+    display: flex;
+    margin-bottom: 40px;
+
+    color: #606060;
+    line-height: 22px;
+    
+}
+.body-barber {
+    display: inline-block;
+}
+.barber-picture {
+    width: 269px;
+    height: 240px;
+    object-fit: cover;
+}
+.wrap-barber-info {
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+.barber-name {
+    font-size: 24px;
+    color: black;
+
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+.barber-pro {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+.barber-about {
+    font-size: 14px;
+
+}

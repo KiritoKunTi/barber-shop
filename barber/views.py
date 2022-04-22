@@ -68,3 +68,8 @@ def join(request):
         form = ResumeForm()
     
     return render(request, 'barber/join_our_team.html', {'form': form})
+
+
+def team(request):
+    barbers = Barbers.objects.all()
+    return render(request, 'barber/our_team.html', {'barbers': barbers})
