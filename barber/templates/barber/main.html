@@ -8,7 +8,45 @@
 {% block title %}Main page{% endblock %}
 
 {% block content %}
-    <h1>hello</h1>
+    <div class="wrapper-main">
+        <div class="wrap-main">
+            <div class="background-video">
+                <video autoplay muted loop id="myVideo">
+                    <source src="static/barber/media/barber-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="wrap-welcome">
+                <div class="block-welcome">
+                    <div class="welcome-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7Bviicl958c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="welcome-text">
+                        <div class="welcome-text__title_big">
+                            WELCOME TO THE BARBERS
+                        </div>
+                        <div class="welcome-text__title">
+                            Bringing back that old fashioned barbershop<br> experience for men of all ages!
+                        </div>
+                        <div class="welcome-text__subtitle">
+                            <p>In May of 1999, Don and Alison Lovell opened their first Barber Shop on the corner of 162 and NE 18th St. in East Vancouver. With an idea based on bringing back that old fashioned barber shop experience and a hope that men of all ages would enjoy a haircut by Barbers focused on cutting only men’s hair, The Barbers were in business.</p>
+
+                            <p>Today, with ten Clark County Locations, seventeen Portland area locations, three Spokane locations, one Corvallis location, one Eugene location, over 300 Barbers and cutting the hair of over 50,000 customers a month, the company has proven that men do enjoy the unique experience of a traditional barbershop. </p>
+
+                            <p>Recent Article – The Barbers celebrates 20 years</p>
+                        </div>
+                        <div class="welcome-buttons">
+                            <button class="about-btn red">
+                                <a href="{% url 'about' %}">More about us</a>
+                            </button>
+                            <button class="join-btn blue">
+                                <a href="{% url 'join' %}">Join to us</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 

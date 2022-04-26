@@ -1,4 +1,119 @@
-
 body {
-    background-color: burlywood;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.55;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+
+    text-transform: uppercase;
+    
+}
+
+button a {
+    display: block;
+    padding: 14px 20px;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 650px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.wrapper-main {
+    margin-top: 85px;
+    width: 100%;
+}
+.wrap-main {
+
+}
+.background-video {
+    position: relative;
+    height: 650px;
+
+}
+.wrap-welcome {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+.block-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.welcome-video {
+}
+.welcome-text {
+    width: 516px;
+}
+.welcome-text__title_big {
+    border-top: 3px solid #273252;
+    border-bottom: 3px solid #273252;
+
+    font-family: Oswald;
+    font-weight: 500;
+    font-size: 40px;
+    color: #273252;
+
+    padding: 9px 0;
+    margin-bottom: 30px;
+}
+.welcome-text__title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    color: #40507f;
+    letter-spacing: 1px;
+
+
+    margin-bottom: 25px;
+    
+}
+.welcome-text__subtitle {
+    font-weight: 300;
+    font-size: 15px;
+    color: #666;
+    
+    margin-bottom: 35px;
+}
+.welcome-text__subtitle p {
+    margin-bottom: 25px;
+}
+.welcome-buttons {
+}
+.about-btn {
+    /* padding: 14px 20px; */
+    margin-right: 12px;
+}
+.red {
+    background-color: #e2001a;
+}
+.join-btn {
+    /* padding: 14px 20px; */
+
+}
+.blue {
+    background-color: #40507f;
 }
