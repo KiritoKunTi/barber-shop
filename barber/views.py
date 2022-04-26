@@ -73,3 +73,8 @@ def join(request):
 def team(request):
     barbers = Barbers.objects.all()
     return render(request, 'barber/our_team.html', {'barbers': barbers})
+
+def about(request):
+    comments = Comments.objects.all()
+    context = {'comments': comments}
+    return render(request, 'barber/about.html', context)

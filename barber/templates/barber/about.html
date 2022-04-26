@@ -1,0 +1,61 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/about.css">
+{% endblock %}
+
+{% block content %}
+    <div class="header_img__block">
+        <div class="img__block">
+            <img src="static/barber/media/source/barber_head_img.jpg" alt="header_img" class="image_head"></div>
+            <div class="img_opacity"></div>
+        <div class="head_title">
+            <span class="title">Testimonials</span>
+        </div>
+    </div>
+
+    <div class="wrapper-about">
+        <div class="wrap-about">
+            
+            <div class="wrap-star-icon">
+                <div class="block-star-icon">
+                    <img width="26px" height="28px" src="static/barber/media/star.svg" alt="star">
+                    <img width="26px" height="28px" src="static/barber/media/star.svg" alt="star">
+                    <img width="26px" height="28px" src="static/barber/media/star.svg" alt="star">
+                    <img width="26px" height="28px" src="static/barber/media/star.svg" alt="star">
+                    <img width="26px" height="28px" src="static/barber/media/star.svg" alt="star">
+
+                </div>
+            </div>
+            <div class="wrap-comments">
+                {% for comment in comments %}
+                
+                    <div class="block-comment">
+                        <div class="comment">
+                            {{ comment.comment }}
+                            
+                        </div>
+                        <div class="person-who-commented">
+                            -- <p> {{ comment.client_name }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+<!-- {% for comment in comments %}
+<div>
+    {{ comment.comment }}
+
+</div>    
+    <br>
+{% endfor %} -->
