@@ -120,3 +120,12 @@ textarea {
 .booking-submit__btn:hover {
     background-color: #273252;
 }
+
+.label {
+    position: relative;
+}
+.label p {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

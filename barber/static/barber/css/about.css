@@ -34,3 +34,18 @@ body {
     letter-spacing: 1.2px;
     padding-left: 4px;
 }
+.wrap-add_comment_btn {
+    background-color: #40507f;
+    outline: none;
+    border: none;
+}
+
+.add_comment_btn {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;    
+}

@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import BookingForm, ResumeForm
+from .forms import BookingForm, ResumeForm, CommentForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -43,7 +43,6 @@ def booking(request):
 
     })
 
-# Create your views here.
 def main(request):
     return render(request, 'barber/main.html')
 
@@ -78,3 +77,15 @@ def about(request):
     comments = Comments.objects.all()
     context = {'comments': comments}
     return render(request, 'barber/about.html', context)
+
+def addComment(request):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('about')
+    else:
+        form = CommentForm()
+        
+    context = {'form': form}
+    return render(request, 'barber/add_comment.html', context)

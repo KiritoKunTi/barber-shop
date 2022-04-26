@@ -1,0 +1,41 @@
+{% extends 'barber/layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/barber/css/add_comment.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="wrapper">
+        <div class="wrap">
+            
+            <div class="block-add-comment">
+                <div class="wrap-add-comment__title">
+                    <img src="static/barber/media/source/barbers-sripes-left.png" alt="">
+                    <span class="quick-booking__text">Add a Comment</span>
+                    <img src="static/barber/media/source/barbers-sripes-right.png" alt="">
+                </div>
+                <div class="add_comment__form">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="wrap-client_name">
+    
+                            <div class="label"><p>Commenter</p></div>
+                            {{ form.client_name }}
+                        </div>
+    
+                        <div class="wrap-comment">
+                            <div class="label"><p>Comment</p></div>
+                            {{ form.comment }}
+                        </div> 
+    
+                        <button class="add-comment__btn" type="submit">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
