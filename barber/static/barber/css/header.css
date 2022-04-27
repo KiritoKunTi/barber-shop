@@ -22,6 +22,24 @@
 .logo {
     padding: 0 40px;
 }
+
+.welcome-user {
+    width: 200px;
+    text-align: right !important;
+    display: flex;
+    font-family: 'Ubuntu' !important;
+
+    color: white;
+    padding: 32px 0 0;
+    margin-left: 350px;
+    box-sizing: border-box;
+
+}
+.welcome-user a {
+    color: rgb(246, 217, 163);
+
+    margin-left: 15px;
+}
 .menu__block {
     margin-right: 20px;
 }

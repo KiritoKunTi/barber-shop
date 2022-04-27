@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="static/barber/css/register.css">
+</head>
+<body>
+    <div class="wrapper-register">
+        <div class="wrap-register">
+            <div class="block-register">
+                <div class="register-text">
+                    Register
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                
+                    {% for field in form %}
+                        <div class="register-fields">
+
+                            {{ field.label }}
+                            {{ field }}
+                            
+                        </div>
+                    {% endfor %}
+                    
+                    <button class="register-btn" type="submit">Register</button>
+                </form> 
+                <div class="already-have-account">
+                    Already have an account? <a href="{% url 'login' %}">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

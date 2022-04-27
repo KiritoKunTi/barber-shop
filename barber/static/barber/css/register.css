@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+body {
+    background-color: #4F646F;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+input {
+    width: 340px;
+    height: 43px;
+    
+    margin-top: 7px;
+    border: none;
+    outline: none;
+
+    border-radius: 5px;
+    background-color: rgba(204, 204, 204, 0.703);
+}
+input:focus {
+    background-color: #ccc;
+}
+
+.wrapper-register {
+    width: 1534px;
+    height: 758px;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    border: 1px solid black;
+
+}
+.wrap-register {
+    width: 400px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 30px;
+    text-align: center;
+
+    background-color: #0D0221;
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 1) 0px 2px 4px 0px, rgba(14, 30, 37, 1) 0px 2px 16px 0px;
+}
+.block-register {
+}
+.register-text {
+    font-weight: 600;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    
+}
+.register-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: palegoldenrod;
+
+    margin-bottom: 10px;
+}
+.register-btn {
+    border: none;
+    outline: none;
+
+    width: 340px;
+    height: 43px;
+    margin: 40px 0 12px;
+
+    border-radius: 5px;
+    background-color: rgba(117, 79, 162, 0.755);
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+
+    transition: background-color linear .5s;
+}
+.register-btn:hover {
+    background-color: #3a0b92;
+}
+.register-btn:focus {
+    background-color: #3a0b92;
+
+}
+.already-have-account {
+    color: wheat;
+}
+
+.already-have-account a {
+    color: rgb(177, 177, 69);
+
+}
+
+.already-have-account a:hover {
+    color: white;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/barber/css/login.css">
+</head>
+<body>
+    <div class="wrapper-login">
+        <div class="wrap-login">
+            <div class="block-login">
+                <div class="login-text">login</div>
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    
+                        <div class="login-fields">
+                            {{ field.label }}
+                            {{ field }}
+            
+                        </div>
+                    {% endfor %}
+                    
+                    {% csrf_token %}
+                    <button class="login-btn" type="submit">Login</button>
+                </form>
+                <div class="do-not-have-account">
+                    Don't have an account? <a href="{% url 'register' %}">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

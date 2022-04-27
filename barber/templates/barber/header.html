@@ -6,6 +6,10 @@
                 <img src="static/barber/media/source/barbers-logo-2-185.png" alt="barbers" class="logo">
             </a>
         </div>
+        <div class="welcome-user">
+            {{ request.user }}
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
         <div class="menu__block">
             <ul class="menu__list">
                 <li class="menu__item"><a class="item__link" href="{% url 'booking' %}">Booking</a></li>
