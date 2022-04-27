@@ -14,5 +14,7 @@ urlpatterns = [
     path('team', views.team, name='team'),
     path('about', views.about, name='about'),
     path('add_comment', views.addComment, name='add_comment'),
+    path('delete_comment/<str:pk>/', views.deleteComment, name='delete_comment'),
+    
     
 ]

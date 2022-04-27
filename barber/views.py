@@ -1,15 +1,18 @@
+from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import BookingForm, ResumeForm, CommentForm, CreatUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import FormView
+from .decorators import allowed_users
 
 
 # Create your views here.
@@ -35,6 +38,9 @@ class RegisterPage(FormView):
 
     def form_valid(self, form):
         user = form.save()
+        group = Group.objects.get(name='client')
+        user.groups.add(group)   
+        
         if user is not None:
             login(self.request, user)
             
@@ -44,22 +50,6 @@ class RegisterPage(FormView):
         if self.request.user.is_authenticated:
             return redirect('main')    
         return super(RegisterPage, self).get(*args, **kwargs)
-
-# def registerPage(request):
-#     if request.user.is_authenticed:
-#         return redirect('main')
-#     else:
-#         if request.method == 'POST':
-#             form = CreatUserForm(request.POST)
-#             if form.is_valid():
-#                 form.save()
-#                 return redirect('login')
-            
-#         else:
-#             form = CreatUserForm()
-        
-#         context = {'form': form}
-#         return render(request, 'barber/register.html', context)
 
 @login_required(login_url='login')
 def booking(request):
@@ -138,6 +128,7 @@ def about(request):
     return render(request, 'barber/about.html', context)
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['client'])
 def addComment(request):
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -149,3 +140,9 @@ def addComment(request):
         
     context = {'form': form}
     return render(request, 'barber/add_comment.html', context)
+
+
+def deleteComment(request, pk):
+    comment = Comments.objects.get(id=pk)
+    comment.delete()
+    return redirect('about')

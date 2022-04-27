@@ -43,16 +43,25 @@
                         <div class="person-who-commented">
                             -- <p> {{ comment.client_name }}</p>
                         </div>
+                        {% if request.user.is_staff %}
+                        
+                        <div class="delete-comment-btn">
+                            <a href="{% url 'delete_comment' comment.id %}">Delete</a>
+                        </div>
+                        {% endif %}
+                        
                     </div>
                 {% endfor %}
                 
             </div>
+            {% if not request.user.is_staff %}
             <center>
                 <button type="submit" class="wrap-add_comment_btn">
                     <a href="{% url 'add_comment' %}" class="add_comment_btn">Add Comment</a>
                 </button>
-
             </center>
+            {% endif %}
+            
         </div>
     </div>
 
